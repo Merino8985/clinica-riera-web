@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clínica Riera · Psicología</title>
-  <meta name="description" content="Clínica Riera, psicología. Nuestra web está en construcción. Escríbenos por WhatsApp para pedir cita.">
-  <meta name="robots" content="noindex">
+  <title>Clínica Riera · Psicóloga en Murcia (La Alberca) · Rosa Riera</title>
+  <meta name="description" content="Clínica Riera, psicóloga en La Alberca (Murcia). Terapia para niños, adolescentes, adultos y parejas, presencial y online. Pide cita por WhatsApp: 629 17 66 79.">
 
   <link rel="icon" type="image/png" href="img/favicon.png">
 
@@ -13,96 +12,59 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- Datos para Google: nombre, dirección y teléfono de la clínica -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Psychologist",
+    "name": "Clínica Riera · Psicología",
+    "url": "https://clinicarierapsicologia.es/",
+    "logo": "https://clinicarierapsicologia.es/img/logo-clinica-riera.png",
+    "image": "https://clinicarierapsicologia.es/img/logo-clinica-riera.png",
+    "telephone": "+34 629 17 66 79",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza Raiguero, 10",
+      "postalCode": "30150",
+      "addressLocality": "La Alberca",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "areaServed": "Murcia"
+  }
+  </script>
+
   <style>
-    /* ===== Colores de la marca ===== */
-    :root {
-      --fondo: #FAF7F2;
-      --moka: #8A6848;
-      --moka-oscuro: #74573C;
-      --texto: #3B2F25;
-      --texto-suave: #5A4C3E;
-      --linea: #E4D9CA;
-    }
-
+    :root { --fondo:#FAF7F2; --fondo-alt:#F1EAE0; --moka:#8A6848; --moka-oscuro:#74573C; --texto:#3B2F25; --texto-suave:#5A4C3E; --linea:#E4D9CA; }
     * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
+    html, body { margin: 0; }
+    body { background: var(--fondo); color: var(--texto); font-family: "Montserrat", system-ui, sans-serif; text-align: center; }
 
-    body {
-      background: var(--fondo);
-      color: var(--texto);
-      font-family: "Montserrat", system-ui, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 20px;
-      text-align: center;
-    }
-
-    main {
-      max-width: 560px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      animation: aparecer 1.2s ease both;
-    }
-
-    @keyframes aparecer {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: none; }
-    }
-
+    /* Parte principal: ocupa toda la pantalla y queda centrada */
+    main { min-height: 100vh; padding: 48px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; animation: aparecer 1.2s ease both; }
+    main > * { max-width: 560px; }
+    @keyframes aparecer { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
     .logo { width: min(340px, 80vw); height: auto; }
-
-    h1 {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-weight: 400;
-      font-size: clamp(30px, 6vw, 44px);
-      line-height: 1.15;
-      margin: 0;
-    }
+    h1 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; font-size: clamp(30px, 6vw, 44px); line-height: 1.15; margin: 0; }
     h1 em { color: var(--moka); }
-
     p { margin: 0; font-size: 16px; line-height: 1.7; color: var(--texto-suave); }
-
     .contacto { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-top: 6px; }
-
     .etiqueta { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--moka); }
-
-    .telefono {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(30px, 7vw, 40px);
-      color: var(--texto);
-      text-decoration: none;
-      letter-spacing: .04em;
-    }
+    .telefono { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(30px, 7vw, 40px); color: var(--texto); text-decoration: none; letter-spacing: .04em; }
     .telefono:hover { color: var(--moka); }
-
-    .boton {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 6px;
-      background: var(--moka);
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 30px;
-      border-radius: 999px;
-      font-size: 13px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      transition: background .2s;
-    }
+    .boton { display: inline-flex; align-items: center; gap: 10px; margin-top: 6px; background: var(--moka); color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 999px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; transition: background .2s; }
     .boton:hover { background: var(--moka-oscuro); }
+    .boton-borde { background: transparent; color: var(--texto); border: 1.5px solid var(--moka); }
+    .boton-borde:hover { background: var(--moka); color: #fff; }
 
-    footer {
-      font-size: 12px;
-      color: #8C7D6B;
-      padding-top: 18px;
-      border-top: 1px solid var(--linea);
-      width: 100%;
-    }
+    /* Ubicación */
+    .ubicacion { background: var(--fondo-alt); padding: 64px 20px; }
+    .ubicacion-contenido { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+    .ubicacion h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; font-size: clamp(28px, 5vw, 38px); margin: 0; }
+    .direccion { font-style: normal; font-size: 17px; line-height: 1.7; color: var(--texto); }
+    .mapa { width: 100%; height: 360px; border: 0; border-radius: 18px; margin-top: 8px; }
+
+    footer { font-size: 12px; color: #8C7D6B; padding: 22px 20px 28px; border-top: 1px solid var(--linea); }
   </style>
 </head>
 <body>
@@ -120,8 +82,25 @@
         Contacta por WhatsApp
       </a>
     </div>
-
-    <footer>© 2026 Clínica Riera · Psicología</footer>
   </main>
+
+  <!-- ===== UBICACIÓN ===== -->
+  <section class="ubicacion">
+    <div class="ubicacion-contenido">
+      <span class="etiqueta">Dónde estamos</span>
+      <h2>Clínica Riera · Psicología</h2>
+      <address class="direccion">
+        Plaza Raiguero, 10<br>
+        30150 La Alberca (Murcia)
+      </address>
+      <iframe class="mapa"
+        src="https://www.google.com/maps?q=Plaza%20Raiguero%2010%2C%2030150%20La%20Alberca%2C%20Murcia&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa: Plaza Raiguero, 10, La Alberca (Murcia)"></iframe>
+      <a class="boton boton-borde" href="https://www.google.com/maps/dir/?api=1&destination=Plaza%20Raiguero%2010%2C%2030150%20La%20Alberca%2C%20Murcia" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Clínica Riera · Psicología · Plaza Raiguero, 10 · 30150 La Alberca (Murcia)</footer>
 </body>
 </html>
